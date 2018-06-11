@@ -2,26 +2,40 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
-## Development server
+# Dependencias:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- font-awesome: Para los iconos de sorting en  el encabezado de las tablas
+- ng2-bootstrap: Para el componente de paginacion
+- ng2-table: Para las opciones y configuraciones de la tabla
 
-## Code scaffolding
+# Otros:
+- json-placeholder: API para obtener datos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Archivos:
+- servicio.service.ts: Para traer los datos del API
 
-## Build
+- app.component.ts: Componente principal y configuración de la tabla
+- app.module.ts: HTML del componente, se presenta la tabla, paginación y la estrucutra de los datos obtenidos del API
+- app.module.ts: Modulo principal de la aplicación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## *app.module
 
-## Running unit tests
+Imports:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
 
-## Running end-to-end tests
+// Servicio de datos
+import { ServicioService } from './servicio.service';
+// modulo para peticiones http
+import { HttpClientModule } from '@angular/common/http'
+// Modulo ng2-table
+import { Ng2TableModule } from 'ng2-table/ng2-table';
+// FormsModule para el uso de la directiva ngModel
+import { FormsModule } from '@angular/forms'
+//Módulo de ng2-bootstrap para el componente de paginación
+import { PaginationModule } from "ng2-bootstrap/pagination";
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
